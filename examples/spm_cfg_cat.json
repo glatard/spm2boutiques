@@ -1,0 +1,43 @@
+{
+	"name": "3D to 4D File Conversion",
+	"description": "Concatenate a number of 3D volumes into a single 4D file.",
+	"schema-version": "0.4",
+	"tool-version": "SPM12 (6225)",
+	"command-line": "TODO",
+	"container-image": {
+		"type": "docker",
+		"image": "spm"
+	},
+	"inputs": [
+		{
+			"id": "vols",
+			"name": "3D Volumes",
+			"type": "String",
+			"description": "Select the volumes to concatenate",
+			"value-key": "[[vols]]",
+			"list": true,
+			"min-list-entries": 1,
+			"optional": false
+		},
+		{
+			"id": "name",
+			"name": "Output Filename",
+			"type": "String",
+			"description": "Specify the name of the output 4D volume file.",
+			"value-key": "[[name]]",
+			"list": true,
+			"min-list-entries": 1,
+			"optional": false
+		},
+		{
+			"id": "dtype",
+			"name": "Data Type",
+			"type": "String",
+			"description": "Data-type of output image. SAME indicates the same datatype as the original images.",
+			"value-key": "[[dtype]]",
+			"list": false,
+			"optional": false
+		}
+	],
+	"output-files": []
+}
