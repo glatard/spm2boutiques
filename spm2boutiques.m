@@ -63,6 +63,7 @@ function spm2boutiques(object,json_file_name)
     boutiques_input.list          = false;
     if(isIn(fieldnames(input{1}),"num") )
       % If input has a field called "num" then it is a list
+      % FIXME I have the feeling that this is not right. In particular, "data" inputs are typically lists in SPM while they shouldn't be in Boutiques.
       boutiques_input.list                 = true;
       if(columns(input{1}.num)!=2)
         error("'num' field does not have 2 columns") % This should never happen
